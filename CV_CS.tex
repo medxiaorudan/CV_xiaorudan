@@ -1,0 +1,60 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% This template is originally maintained by Christophe ROGER from:
+% https://github.com/darwiin/awesome-neue-latex-cv
+%
+% This version is based on the modification from:
+% https://github.com/innerTide/awesome-neue-latex-cv-extended
+% Author:
+% Zhihao Zhou
+%
+%
+
+%roman numeral
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\documentclass[localFont, alternative]{awesome-source-cv}
+
+% Name should be {<Given name>} {<Family name>}.
+% The display order is automatically reversed with Chinese support is enabled.
+
+\name{Rudan}{XIAO}
+\photo{2.6cm}{figs/photo}
+\tagline{Master of Genetics}
+\socialinfo{
+	\smartphone{+86 18511954477}
+	\email{xiaorudan@big.ac.cn}\\
+	\github{medxiaorudan}\\
+	\address{No.1-104 Beichen West Road, Chaoyang, \textbf{Beijing, China}}\\
+	\infos{Born on \textbf{Sep. 21, 1992} in \textbf{Shanxi, China}}\\
+}
+%------------------------------------------
+\begin{document}
+% \makecvheader
+\makecvheaderwithoutphoto
+%--------------------SECTIONS-----------------------------------
+\input{secs/education}
+%Project Experience
+\input{secs/section_experience_short}
+% \input{secs/work_experience}
+% \input{secs/projects}
+% \input{secs/papers}
+%\input{secs/skills}
+\sectionTitle{\textsc{Professional Skills}}{\faTasks}
+\renewcommand{\arraystretch}{1.1}
+
+	\begin{tabular}{>{}r>{}p{13cm}}
+		%\textsc{Development Tools:}	  			&   Cadence, LTspice, ADS, Vivado, Quartus \Rmnum{2}, Altium Designer, ANSYS, Git\\
+		\textsc{Programming Languages:}  		&
+		R, Python, Shell, php, SPSS, Visual Basic, Java, Ruby\\
+		\textsc{Operating Systems:}	        &   Windows, Linux\\
+	\end{tabular}
+%\input{secs/language}
+\input{secs/awards.tex}
+\input{secs/publications.tex}
+\end{document}
+
